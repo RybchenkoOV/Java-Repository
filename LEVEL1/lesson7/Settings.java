@@ -1,4 +1,4 @@
-package lesson7;
+package LEVEL1.lesson7;
 
 import javax.swing.*;
 import javax.swing.event.ChangeEvent;
@@ -54,7 +54,7 @@ public class Settings extends JFrame{
         } else {
             throw new RuntimeException("Unknown Game mode");
         }
-        Playground.startNewGameSet(selectedMode,finPgSize,finPgSize, finWinSeq);
+        mainMenu.getSetToStart(selectedMode,finPgSize,finPgSize, finWinSeq);
         setVisible(false);
     }
     private void setModeMethod(){
@@ -115,7 +115,7 @@ public class Settings extends JFrame{
         starterBtn = new JButton("START GAME");
         start.setLayout(new GridLayout(1, 1));
         add(start, BorderLayout.CENTER);
-        start.add(starterBtn);
+
 
         starterBtn.addActionListener(new ActionListener() {
             @Override
@@ -123,5 +123,6 @@ public class Settings extends JFrame{
                 startNewGame();
             }
         });
+        start.add(starterBtn);
     }
 }

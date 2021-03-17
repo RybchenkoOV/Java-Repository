@@ -1,4 +1,4 @@
-package lesson7;
+package LEVEL1.lesson7;
 
 import javax.swing.*;
 import java.awt.*;
@@ -17,8 +17,8 @@ public class MainMenu extends JFrame {
     int HHH = dimensionCaster.getDisplayMode().getHeight()/2-SET_Y_MAP/2; // Центруем по Y
 
     MainMenu() {
-        Settings settings = new Settings(this);
-        Playground playground = new Playground();
+        settings = new Settings(this);
+        playground = new Playground();
         setTitle("Tic-Tac-Toe Game");
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setSize(SET_X_MAP,SET_Y_MAP);
